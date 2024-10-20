@@ -1181,3 +1181,32 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 16px; /* Ensure padding is consistent */
   }
 }
+
+/* Add this to your existing CSS */
+.registration-section .image-item {
+  flex: 0 0 300px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-section .image-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.registration-section .image-item h3 {
+  color: #ffffff; /* Changed from #f9ab00 to white */
+}
+
+.registration-section .image-item p {
+  color: #fff;
+}
+
+.registration-section .image-item i {
+  margin-right: 8px;
+}
+
