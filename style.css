@@ -230,7 +230,7 @@ span.num:after {
 }
 
 span.text {
-  font-size: 1em;
+  font-size: 2em;
   background-color: var(--color-white);
   color: var(--color-black);
   display: block;
@@ -1210,3 +1210,151 @@ body::-webkit-scrollbar-thumb:hover {
   margin-right: 8px;
 }
 
+/* Update these media queries for mobile view */
+@media (max-width: 768px) {
+  .registration-section .image-item {
+    flex: 0 0 auto;
+    width: 100%; /* Make it full width */
+    margin: 0 0 20px; /* Remove horizontal margin */
+    padding: 15px 10px; /* Reduce padding */
+  }
+
+  .registration-section .image-item h3 {
+    font-size: 1.1rem;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .registration-section .image-item p {
+    font-size: 0.9rem;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Adjust the container padding if necessary */
+  .registration-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Registration Section Styles */
+.registration-section {
+  padding: 2rem 0;
+}
+
+.registration-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.registration-section h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.registration-section .slider-wrapper {
+  position: relative;
+}
+
+.registration-section .image-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.registration-section .image-item {
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: 300px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-section .image-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.registration-section .image-item h3 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.registration-section .image-item p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-section .image-item i {
+  margin-right: 15px;
+  font-size: 1.4rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .registration-section .image-item {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-section .image-item {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+  }
+
+  .registration-section .image-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .registration-section .image-item p {
+    font-size: 1.1rem;
+  }
+}
+
+.registration-section .image-item .charges-info {
+  font-size: 0.6rem; /* Very small text */
+  color: #9ca3af; /* Light grey color */
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-section .image-item .charges-info i {
+  font-size: 0.8em; /* Slightly larger than text for visibility */
+  margin-right: 3px;
+}
+
+.registration-section .image-item .charges-info span {
+  opacity: 0.8; /* Slightly reduce opacity for even more subtlety */
+}
+
+/* Existing styles for agenda section buttons */
+.agenda-section .slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* ... other existing styles ... */
+}
+
+/* Add this media query to hide buttons on phone-sized screens */
+@media (max-width: 768px) {
+  .agenda-section .slide-button {
+    display: none !important;
+  }
+}
