@@ -426,3 +426,4 @@ window.addEventListener("load", initAgendaSlider);
 
 // Initialize agenda slider
 initAgendaSlider();
+
