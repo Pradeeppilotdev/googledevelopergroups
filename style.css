@@ -1005,180 +1005,99 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Event Section Styles */
 .event-section {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .event-section .container {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-  overflow-x: hidden; /* Hide horizontal scrollbar on larger screens */
 }
 
 .event-section h2 {
   color: #fff;
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-/* Slider Wrapper Styles */
-.event-section .slider-wrapper {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.event-section .slider-wrapper .slide-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  height: 50px;
-  width: 50px;
-  z-index: 5;
-  color: #fff;
+.event-section .event-image-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  gap: 30px;
 }
 
-.event-section .slider-wrapper .slide-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.event-section .slider-wrapper .slide-button#prev-event-slide {
-  left: -25px;
-}
-
-.event-section .slider-wrapper .slide-button#next-event-slide {
-  right: -25px;
-}
-
-.event-section .slider-wrapper .event-image-list {
-  display: flex;
-  gap: 20px;
-  padding: 20px 0;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-}
-
-.event-section .slider-wrapper .event-image-list::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-}
-
-.event-section .slider-wrapper .event-image-list .image-item {
-  flex: 0 0 300px;
+.event-section .image-item {
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 300px;
   background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  padding: 25px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.event-section .slider-wrapper .event-image-list .image-item:hover {
+.event-section .image-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.event-section .slider-wrapper .event-image-list .image-item p {
-  margin: 0;
+.event-section .image-item h1 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.event-section .image-item p {
   color: #fff;
-}
-
-.event-section .slider-wrapper .event-image-list .image-item .text-2xl {
-  font-size: 1.75rem;
-  font-weight: bold;
-}
-
-.event-section .slider-wrapper .event-image-list .image-item .mt-2 {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Slider Scrollbar Styles */
-.event-section .slider-scrollbar {
-  margin-top: 20px;
-  height: 8px;
-  background-color: #2c2c2c;
-  border-radius: 4px;
-  position: relative;
-}
-
-.event-section .slider-scrollbar .scrollbar-track {
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  overflow: hidden;
-  position: relative;
-}
-
-.event-section .slider-scrollbar .scrollbar-thumb {
-  height: 100%;
-  width: 30%;
-  background-color: #0F9D58;
-  border-radius: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: grab;
-  transition: background-color 0.3s ease;
-}
-
-.event-section .slider-scrollbar .scrollbar-thumb:hover {
-  background-color: #0F9D58;
-}
-
-.event-section .slider-scrollbar .scrollbar-thumb:active {
-  cursor: grabbing;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
-  .event-section .container {
-    overflow-x: auto; /* Show horizontal scrollbar on smaller screens */
-  }
-
-  .event-section .slider-wrapper .slide-button {
-    display: none;
-  }
-
-  .event-section .slider-wrapper .event-image-list {
-    gap: 15px;
-  }
-
-  .event-section .slider-wrapper .event-image-list .image-item {
-    flex: 0 0 250px;
+@media (max-width: 1200px) {
+  .event-section .image-item {
+    flex: 0 1 calc(50% - 15px);
   }
 }
 
 @media (max-width: 768px) {
-  .event-section .slider-wrapper .event-image-list .image-item {
-    flex: 0 0 200px;
-    padding: 15px;
+  .event-section h2 {
+    font-size: 2rem;
   }
 
-  .event-section .slider-scrollbar .scrollbar-thumb {
-    width: 40%;
+  .event-section .image-item {
+    flex: 0 1 100%;
+    min-width: unset;
+  }
+
+  .event-section .image-item h1 {
+    font-size: 1.6rem;
+  }
+
+  .event-section .image-item p {
+    font-size: 1.1rem;
   }
 }
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-  .event-image-list {
-    flex-direction: column;
-    align-items: center;
+
+@media (max-width: 480px) {
+  .event-section h2 {
+    font-size: 1.8rem;
   }
 
-  .image-item {
-    width: 100%; /* Make the cards take full width */
-    margin-bottom: 16px; /* Add some space between cards */
-    padding: 16px; /* Ensure padding is consistent */
+  .event-section .image-item {
+    padding: 20px;
+  }
+
+  .event-section .image-item h1 {
+    font-size: 1.4rem;
+  }
+
+  .event-section .image-item p {
+    font-size: 1rem;
   }
 }
 
@@ -1242,12 +1161,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Registration Section Styles */
 .registration-section {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .registration-section .container {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1255,28 +1173,23 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section h2 {
   color: #fff;
   text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
-.registration-section .slider-wrapper {
-  position: relative;
-}
-
-.registration-section .image-list {
+.registration-section .event-image-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 20px 0;
 }
 
 .registration-section .image-item {
-  flex: 0 0 calc(33.333% - 20px);
+  flex: 0 1 calc(33.333% - 20px);
   min-width: 300px;
   background-color: #1e1e1e;
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
-  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1289,33 +1202,58 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section .image-item h3 {
   color: #ffffff;
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .registration-section .image-item p {
   color: #fff;
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  line-height: 1.4;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  word-break: break-word;
 }
 
 .registration-section .image-item i {
   margin-right: 15px;
   font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.registration-section .image-item .individual-allowed,
+.registration-section .image-item .charges-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.registration-section .image-item .individual-allowed {
+  color: #4CAF50;
+}
+
+.registration-section .image-item .charges-info {
+  color: #9ca3af;
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .registration-section .image-item {
-    flex: 0 0 calc(50% - 20px);
+    flex: 0 1 calc(50% - 15px);
   }
 }
 
 @media (max-width: 768px) {
+  .registration-section h2 {
+    font-size: 2rem;
+  }
+
   .registration-section .image-item {
-    flex: 0 0 100%;
-    margin-bottom: 30px;
+    flex: 0 1 100%;
+    min-width: unset;
+    padding: 25px; /* Increased padding for more space */
   }
 
   .registration-section .image-item h3 {
@@ -1325,23 +1263,55 @@ body::-webkit-scrollbar-thumb:hover {
   .registration-section .image-item p {
     font-size: 1.1rem;
   }
+
+  .registration-section .container {
+    padding: 0 10px; /* Reduced container padding to allow wider boxes */
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .registration-section .image-item {
+    padding: 20px;
+  }
+
+  .registration-section .image-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .registration-section .image-item p {
+    font-size: 1rem;
+  }
+
+  .registration-section .image-item .individual-allowed,
+  .registration-section .image-item .charges-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Retain the existing styles for individual allowed and charges info */
+.registration-section .image-item .individual-allowed {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  color: #4CAF50;
+  font-size: 1rem;
 }
 
 .registration-section .image-item .charges-info {
-  font-size: 0.6rem; /* Very small text */
-  color: #9ca3af; /* Light grey color */
+  font-size: 0.8rem;
+  color: #9ca3af;
   margin-top: 8px;
   display: flex;
   align-items: center;
 }
 
 .registration-section .image-item .charges-info i {
-  font-size: 0.8em; /* Slightly larger than text for visibility */
-  margin-right: 3px;
-}
-
-.registration-section .image-item .charges-info span {
-  opacity: 0.8; /* Slightly reduce opacity for even more subtlety */
+  font-size: 1em;
+  margin-right: 5px;
 }
 
 /* Existing styles for agenda section buttons */
@@ -1358,3 +1328,82 @@ body::-webkit-scrollbar-thumb:hover {
     display: none !important;
   }
 }
+
+/* Existing button styles */
+.btn-register {
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+/* Google-themed gradient on hover */
+.btn-register:hover {
+  background-image: linear-gradient(
+    45deg,
+    #4285F4, /* Google Blue */
+    #DB4437, /* Google Red */
+    #F4B400, /* Google Yellow */
+    #0F9D58  /* Google Green */
+  );
+  background-size: 300% 300%;
+  animation: google-gradient 5s ease infinite;
+}
+
+/* Animation for the gradient */
+@keyframes google-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure text remains white and readable */
+.btn-register:hover a {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your existing registration section styles */
+.registration-section .image-item .individual-allowed {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  color: #4CAF50; /* Green color for positive indication */
+  font-size: 1rem;
+}
+
+.registration-section .image-item .individual-allowed i {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.registration-section .image-item .individual-allowed span {
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-section .image-item .individual-allowed {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-section .image-item .individual-allowed {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
