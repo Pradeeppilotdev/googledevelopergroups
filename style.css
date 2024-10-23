@@ -114,7 +114,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px;
+  padding: 0px 100px;
   background: rgba(32, 30, 30, 0.1);
   display: flex;
   justify-content: space-between;
@@ -147,11 +147,6 @@
   cursor: default;
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
 .navbar a {
   color: #fff;
   font-size: 18px;
@@ -160,14 +155,9 @@
   transition: 0.3s;
 }
 
-.btn-register {
-  margin-left: 35px;
-}
-
 #menu-icon {
   font-size: 36px;
   color: #fff;
-  cursor: pointer;
   display: none;
 }
 
@@ -292,10 +282,6 @@ span.text {
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 15px 20px;
-  }
-
   #menu-icon {
     display: block;
   }
@@ -305,10 +291,7 @@ span.text {
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem 3%;
-    background: rgba(32, 30, 30, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 4%;
     display: none;
   }
 
@@ -318,29 +301,25 @@ span.text {
 
   .navbar a {
     display: block;
-    font-size: 1.1rem;
     margin: 1.5rem 0;
   }
 
-  .btn-register {
+  .nav-bg {
     position: absolute;
-    top: 15px;
-    right: 70px;
-    margin: 0;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    height: 295px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
   }
-}
 
-/* Prevent horizontal scrolling */
-body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-}
-
-/* Adjust any full-width elements that might cause overflow */
-.full-width-element {
-  max-width: 100vw;
-  overflow-x: hidden;
+  .nav-bg.active {
+    display: block;
+  }
 }
 
 /* Agenda Section Styles */
@@ -1194,52 +1173,52 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section h2 {
   color: #fff;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .registration-section .event-image-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .registration-section .image-item {
-  flex: 0 1 calc(33.333% - 30px);
-  min-width: 350px;
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 300px;
   background-color: #1e1e1e;
-  padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .registration-section .image-item:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .registration-section .image-item h3 {
   color: #ffffff;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
   line-height: 1.2;
 }
 
 .registration-section .image-item p {
   color: #fff;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
   display: flex;
   align-items: flex-start;
   word-break: break-word;
 }
 
 .registration-section .image-item i {
-  margin-right: 20px;
-  font-size: 1.6rem;
+  margin-right: 15px;
+  font-size: 1.4rem;
   flex-shrink: 0;
 }
 
@@ -1247,90 +1226,184 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section .image-item .charges-info {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.registration-section .image-item .individual-allowed {
+  color: #4CAF50;
+}
+
+.registration-section .image-item .charges-info {
+  color: #9ca3af;
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .registration-section .image-item {
-    flex: 0 1 calc(50% - 20px);
+    flex: 0 1 calc(50% - 15px);
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .registration-section h2 {
-    font-size: 2.5rem;
-  }
-
-  .registration-section .image-item {
-    flex: 0 1 calc(50% - 20px);
-    min-width: 300px;
-    padding: 30px;
-  }
-
-  .registration-section .image-item h3 {
     font-size: 2rem;
   }
 
-  .registration-section .image-item p {
-    font-size: 1.3rem;
-  }
-}
-
-/* Mobile view styles (reverting to older version) */
-@media (max-width: 768px) {
   .registration-section .image-item {
-    flex: 0 0 auto;
-    width: 100%;
-    margin: 0 0 20px;
-    padding: 20px;
+    flex: 0 1 100%;
     min-width: unset;
-    border-radius: 10px;
+    padding: 25px; /* Increased padding for more space */
   }
 
   .registration-section .image-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
   }
 
   .registration-section .image-item p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-
-  .registration-section .image-item i {
-    margin-right: 10px;
-    font-size: 1.2rem;
-  }
-
-  .registration-section .image-item .individual-allowed,
-  .registration-section .image-item .charges-info {
-    margin-top: 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .registration-section .container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px; /* Reduced container padding to allow wider boxes */
   }
 }
 
 @media (max-width: 480px) {
   .registration-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .registration-section .image-item {
-    padding: 15px;
+    padding: 20px;
   }
 
   .registration-section .image-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .registration-section .image-item p {
+    font-size: 1rem;
+  }
+
+  .registration-section .image-item .individual-allowed,
+  .registration-section .image-item .charges-info {
     font-size: 0.9rem;
   }
 }
+
+/* Retain the existing styles for individual allowed and charges info */
+.registration-section .image-item .individual-allowed {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  color: #4CAF50;
+  font-size: 1rem;
+}
+
+.registration-section .image-item .charges-info {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.registration-section .image-item .charges-info i {
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+/* Existing styles for agenda section buttons */
+.agenda-section .slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* ... other existing styles ... */
+}
+
+/* Add this media query to hide buttons on phone-sized screens */
+@media (max-width: 768px) {
+  .agenda-section .slide-button {
+    display: none !important;
+  }
+}
+
+/* Existing button styles */
+.btn-register {
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+/* Google-themed gradient on hover */
+.btn-register:hover {
+  background-image: linear-gradient(
+    45deg,
+    #4285F4, /* Google Blue */
+    #DB4437, /* Google Red */
+    #F4B400, /* Google Yellow */
+    #0F9D58  /* Google Green */
+  );
+  background-size: 300% 300%;
+  animation: google-gradient 5s ease infinite;
+}
+
+/* Animation for the gradient */
+@keyframes google-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Ensure text remains white and readable */
+.btn-register:hover a {
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your existing registration section styles */
+.registration-section .image-item .individual-allowed {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  color: #4CAF50; /* Green color for positive indication */
+  font-size: 1rem;
+}
+
+.registration-section .image-item .individual-allowed i {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.registration-section .image-item .individual-allowed span {
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-section .image-item .individual-allowed {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-section .image-item .individual-allowed {
+    font-size: 0.8rem;
+  }
+}
+
+
+
 
