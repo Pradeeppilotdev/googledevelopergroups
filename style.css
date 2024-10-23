@@ -1173,43 +1173,43 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section h2 {
   color: #fff;
   text-align: center;
-  font-size: 3rem; /* Increased from 2.5rem */
-  margin-bottom: 2.5rem; /* Increased from 2rem */
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .registration-section .event-image-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px; /* Increased from 30px */
+  gap: 40px;
 }
 
 .registration-section .image-item {
-  flex: 0 1 calc(33.333% - 30px); /* Adjusted for increased gap */
-  min-width: 350px; /* Increased from 300px */
+  flex: 0 1 calc(33.333% - 30px);
+  min-width: 350px;
   background-color: #1e1e1e;
-  padding: 35px; /* Increased from 25px */
-  border-radius: 20px; /* Increased from 15px */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Increased shadow */
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .registration-section .image-item:hover {
-  transform: translateY(-15px); /* Increased from -10px */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Increased shadow */
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
 .registration-section .image-item h3 {
   color: #ffffff;
-  font-size: 2.2rem; /* Increased from 1.8rem */
-  margin-bottom: 20px; /* Increased from 15px */
+  font-size: 2.2rem;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .registration-section .image-item p {
   color: #fff;
-  font-size: 1.4rem; /* Increased from 1.2rem */
-  margin-bottom: 15px; /* Increased from 10px */
+  font-size: 1.4rem;
+  margin-bottom: 15px;
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
@@ -1217,8 +1217,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .registration-section .image-item i {
-  margin-right: 20px; /* Increased from 15px */
-  font-size: 1.6rem; /* Increased from 1.4rem */
+  margin-right: 20px;
+  font-size: 1.6rem;
   flex-shrink: 0;
 }
 
@@ -1226,11 +1226,9 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section .image-item .charges-info {
   display: flex;
   align-items: center;
-  margin-top: 20px; /* Increased from 15px */
-  font-size: 1.2rem; /* Increased from 1rem */
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
-
-/* Retain existing styles for individual allowed and charges info */
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1400px) {
@@ -1259,16 +1257,58 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* Existing mobile styles remain unchanged */
+/* Mobile view styles (reverting to older version) */
 @media (max-width: 768px) {
-  // ... existing mobile styles ...
+  .registration-section .image-item {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 20px;
+    min-width: unset;
+    border-radius: 10px;
+  }
+
+  .registration-section .image-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .registration-section .image-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .registration-section .image-item i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  .registration-section .image-item .individual-allowed,
+  .registration-section .image-item .charges-info {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+
+  .registration-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-  // ... existing mobile styles ...
+  .registration-section h2 {
+    font-size: 2rem;
+  }
+
+  .registration-section .image-item {
+    padding: 15px;
+  }
+
+  .registration-section .image-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .registration-section .image-item p {
+    font-size: 0.9rem;
+  }
 }
-
-
-
-
-
