@@ -114,7 +114,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0px 100px;
+  padding: 20px 100px;
   background: rgba(32, 30, 30, 0.1);
   display: flex;
   justify-content: space-between;
@@ -147,6 +147,11 @@
   cursor: default;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
 .navbar a {
   color: #fff;
   font-size: 18px;
@@ -155,9 +160,14 @@
   transition: 0.3s;
 }
 
+.btn-register {
+  margin-left: 35px;
+}
+
 #menu-icon {
   font-size: 36px;
   color: #fff;
+  cursor: pointer;
   display: none;
 }
 
@@ -282,6 +292,10 @@ span.text {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
   #menu-icon {
     display: block;
   }
@@ -291,7 +305,10 @@ span.text {
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 0.5rem 4%;
+    padding: 1rem 3%;
+    background: rgba(32, 30, 30, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     display: none;
   }
 
@@ -301,25 +318,29 @@ span.text {
 
   .navbar a {
     display: block;
+    font-size: 1.1rem;
     margin: 1.5rem 0;
   }
 
-  .nav-bg {
+  .btn-register {
     position: absolute;
-    top: 79px;
-    left: 0;
-    width: 100%;
-    height: 295px;
-    background: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    z-index: 99;
-    display: none;
+    top: 15px;
+    right: 70px;
+    margin: 0;
   }
+}
 
-  .nav-bg.active {
-    display: block;
-  }
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Adjust any full-width elements that might cause overflow */
+.full-width-element {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Agenda Section Styles */
@@ -1312,3 +1333,4 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.9rem;
   }
 }
+
