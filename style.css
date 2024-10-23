@@ -1186,9 +1186,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 .registration-section .image-item {
   flex: 0 1 calc(33.333% - 20px);
-  min-width: 300px;
+  min-width: 350px; /* Increased from 300px */
   background-color: #1e1e1e;
-  padding: 25px;
+  padding: 30px; /* Increased from 25px */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1201,15 +1201,15 @@ body::-webkit-scrollbar-thumb:hover {
 
 .registration-section .image-item h3 {
   color: #ffffff;
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  font-size: 2rem; /* Increased from 1.8rem */
+  margin-bottom: 20px; /* Increased from 15px */
   line-height: 1.2;
 }
 
 .registration-section .image-item p {
   color: #fff;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem; /* Increased from 1.2rem */
+  margin-bottom: 15px; /* Increased from 10px */
   line-height: 1.4;
   display: flex;
   align-items: flex-start;
@@ -1218,7 +1218,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .registration-section .image-item i {
   margin-right: 15px;
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* Increased from 1.4rem */
   flex-shrink: 0;
 }
 
@@ -1226,8 +1226,8 @@ body::-webkit-scrollbar-thumb:hover {
 .registration-section .image-item .charges-info {
   display: flex;
   align-items: center;
-  margin-top: 15px;
-  font-size: 1rem;
+  margin-top: 20px; /* Increased from 15px */
+  font-size: 1.1rem; /* Increased from 1rem */
 }
 
 .registration-section .image-item .individual-allowed {
@@ -1253,7 +1253,7 @@ body::-webkit-scrollbar-thumb:hover {
   .registration-section .image-item {
     flex: 0 1 100%;
     min-width: unset;
-    padding: 25px; /* Increased padding for more space */
+    padding: 25px;
   }
 
   .registration-section .image-item h3 {
@@ -1265,7 +1265,13 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .registration-section .container {
-    padding: 0 10px; /* Reduced container padding to allow wider boxes */
+    padding: 0 10px;
+  }
+
+  .registration-section .image-item .individual-allowed,
+  .registration-section .image-item .charges-info {
+    font-size: 1rem;
+    margin-top: 15px;
   }
 }
 
@@ -1403,6 +1409,7 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.8rem;
   }
 }
+
 
 
 
