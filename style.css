@@ -872,109 +872,100 @@ span.text {
 }
 
 
+/* Footer Styles */
 footer {
-  /* Dark background color */
- color: #ffffff; /* White text color */
- padding: 40px 0; /* Increased padding for more space */
- display: flex;
- justify-content: center;
- align-items: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 40px 0;
 }
 
 .footer-container {
- display: flex;
- width: 90%;
- max-width: 1200px;
- flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .map-section {
- flex: 1;
- height: 300px; /* Adjusted height */
- margin-right: 20px; /* Space between map and details */
- background-color: #1e1e1e; /* Darker background for map section */
- border-radius: 10px; /* Rounded corners */
- overflow: hidden; /* Ensure content stays within bounds */
+  flex: 1;
+  max-width: 600px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  border: none;
+  border-radius: 10px;
 }
 
 .details-section {
   flex: 1;
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 10px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #1e1e1e; /* Darker background for details section */
-  border-radius: 10px; /* Rounded corners */
-  padding-left: 20px; /* Adjusted padding for better spacing */
+  justify-content: space-between;
 }
 
-
 .details-section h1 {
- font-size: 1.5rem; /* Adjusted font size */
- margin-top: 14px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 .details-section p {
- /* Adjusted font size */
-  margin-top: 15px;
- }
+  margin-bottom: 10px;
+}
+
+.details-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.details-section a:hover {
+  color: #4285f4;
+}
 
 .footer-links {
- display: flex;
- gap: 15px;
- margin-top: 130px; /* Increased margin for better spacing */
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .footer-links a {
- color: #fff;
- text-decoration: none;
- font-size: 24px; /* Increased font size */
- transition: color 0.3s; /* Smooth color transition */
- }
-
-.footer-links a:hover {
- text-decoration: underline;
- color: #f9ab00; /* Change color on hover */
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
+.footer-links a:hover {
+  color: #4285f4;
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
- footer {
-   display: flex;
-   flex-direction: column; /* Arrange items vertically */
-   align-items: center; /* Center all items horizontally */
- }
+  .footer-container {
+    flex-direction: column;
+  }
 
- .footer-container {
-   display: flex;
-   flex-direction: column; /* Arrange items vertically inside the container */
-   align-items: center; /* Center all items horizontally */
- }
+  .map-section,
+  .details-section {
+    max-width: 100%;
+    margin-left: 0;
+  }
 
- .map-section {
-   order: 1; /* Display the map section first */
-   width: 100%; /* Ensure the map section takes full width */
-   height: 200px; /* Adjust height for mobile view */
-   display: flex;
-   justify-content: center; /* Center the map horizontally */
-   margin-bottom: 20px; /* Add bottom margin for spacing */
- }
+  .details-section {
+    margin-top: 20px;
+  }
 
- .map {
-   width: 100%; /* Ensure the map takes full width of its container */
-   max-width: 300px; /* Optional: Limit the max width */
- }
-
- .details-section {
-   order: 2; /* Display the details section second */
-   width: 100%; /* Ensure the details section takes full width */
-   text-align: left; /* Center align the text for better appearance */
-   margin-left: -20px;
- }
- .footer-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-  margin-bottom: 20px; /* Increased margin for better spacing */
- }
- 
+  .map-section iframe {
+    min-height: 300px;
+  }
 }
 
 
@@ -1409,6 +1400,8 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.8rem;
   }
 }
+
+
 
 
 
